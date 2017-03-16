@@ -37,7 +37,7 @@
         url: "startup.html",
         timeline: test_data,
         randomize_order: true,
-        cont_key: 70
+        cont_btn: "end-trial"
       };
 
       /* create experiment timeline array */
@@ -48,10 +48,7 @@
       jsPsych.init({
         timeline: timeline,
         on_data_update: function(data) {
-         console.log('Just added new data. The contents of the data are: '+JSON.stringify(data));
-       },
-       on_trial_start: function() {
-          console.log('A trial just started.');
+          console.log('Just added new data. The contents of the data are: '+JSON.stringify(data));
         },
         fullscreen: true
       });
